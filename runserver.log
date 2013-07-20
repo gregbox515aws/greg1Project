@@ -4,3 +4,6 @@ Validating models...
 Django version 1.3.1, using settings 'greg1Project.settings'
 Development server is running at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('172.2.52.114', 54119)
+----------------------------------------
