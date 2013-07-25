@@ -1,0 +1,13 @@
+
+{% extends "greg1App/master.html" %} 
+
+{% block title %} greg1App Person Update {% endblock %}
+
+{% block content %}
+
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+</form>
+
+{% endblock %}
