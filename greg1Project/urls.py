@@ -1,5 +1,10 @@
 from django.conf.urls import patterns, include, url
 
+
+from django.views.generic import ListView
+from greg1App.models import Person
+
+
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -14,5 +19,10 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+    # greg1App urls
     url(r'^$', 'greg1App.views.home'),
+    url(r'^person_list$', ListView.as_view(model=Person)),
+    url(r'^person_update/$', ListView.as_view(model=Person)),
+    url(r'^person_delete/$', ListView.as_view(model=Person)),
 )

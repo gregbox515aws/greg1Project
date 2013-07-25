@@ -1,0 +1,27 @@
+{% extends "greg1App/master.html" %} 
+
+{% block title %} greg1App Person List {% endblock %}
+
+{% block content %}
+
+<TABLE border=1>
+
+	<TR>
+		<TH>Person</TH>
+	</TR>
+
+{% for x in object_list %}
+
+	<TR>
+		<TD>
+			{{ x }}
+			<A HREF="/person_update/{{ x.id }}/">[Update]</A>
+			<A HREF="/person_delete/{{ x.id }}/">[Delete]</A>
+		</TD>
+	</TH>
+	
+{% endfor %}
+
+</TABLE>
+
+{% endblock %}
