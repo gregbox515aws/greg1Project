@@ -1,0 +1,35 @@
+{% extends "greg1App/master.html" %} 
+
+{% block title %} greg1App Person Detail {% endblock %}
+
+{% block content %}
+
+<TABLE border=1>
+
+	<TR>
+		<TH colspan=2>Person <I>{{ person }}</I></TH>
+	</TR>
+
+	<TR>
+		<TH align=left>First Name</TH>
+		<TD>{{ person.firstName }}</TD>
+	</TR>
+
+	<TR>
+		<TH align=left>Last Name</TH>
+		<TD>{{ person.lastName }}</TD>
+	</TR>
+
+	<TR>
+		<TH align=left>Age</TH>
+		<TD>{{ person.age }}</TD>
+	</TR>
+
+	<TR>
+		<TH align=left>Gender</TH>
+		<TD>{{ person.gender }}</TD>
+	</TR>
+	
+</TABLE>
+
+{% endblock %}

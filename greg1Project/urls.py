@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 
 
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from greg1App.models import Person
 
 
@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     # greg1App urls
     url(r'^$', 'greg1App.views.home'),
     url(r'^person_list$', ListView.as_view(model=Person)),
-    url(r'^person_update/$', ListView.as_view(model=Person)),
-    url(r'^person_delete/$', ListView.as_view(model=Person)),
+    url(r'^person_detail/(?P<pk>\d+)$', DetailView.as_view(model=Person)),
+    url(r'^person_update/(?P<pk>\d+)$', DetailView.as_view(model=Person)),
+    url(r'^person_delete/(?P<pk>\d+)$', DetailView.as_view(model=Person)),
 )
