@@ -5,9 +5,11 @@
 
 {% block content %}
 
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Update" />
-</form>
+<FORM action="" method="post">{% csrf_token %}
+	<TABLE>
+		{{ form.as_table }}
+		<INPUT type="submit" value="Update" />
+	</TABLE>
+</FORM>
 
 {% endblock %}
