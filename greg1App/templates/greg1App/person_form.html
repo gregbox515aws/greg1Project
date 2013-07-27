@@ -6,10 +6,11 @@
 {% block content %}
 
 <FORM action="" method="post">{% csrf_token %}
-	<TABLE>
+	<TABLE border=1>
 		{{ form.as_table }}
-		<INPUT type="submit" value="Update" />
 	</TABLE>
+	<P></P>
+	<INPUT type="submit" value="Update" />
 </FORM>
 
 {% endblock %}

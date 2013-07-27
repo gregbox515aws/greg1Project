@@ -65,7 +65,7 @@ a img:hover {
 	background-color: #FFFFFF;
 }
 
-#sidebar{
-	font-size:80%;
-	font-family: "arial narrow", georgia, arial, sans-serif;
+table, th, td {
+	border-spacing:2px;
+	padding:4px;
 }
