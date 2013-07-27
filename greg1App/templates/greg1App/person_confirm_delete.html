@@ -1,0 +1,15 @@
+
+{% extends "greg1App/master.html" %} 
+
+{% block title %} greg1App Person Update {% endblock %}
+
+{% block content %}
+
+<P>Do you really want to delete {{ person }}?</P>
+
+<FORM method="post" action="{{ request.path_info }}">{% csrf_token %}
+	<input type="submit" value="Delete" />
+</FORM>
+
+
+{% endblock %}
