@@ -19,10 +19,21 @@
 			<A HREF="/person_update/{{ x.id }}">[Update]</A>
 			<A HREF="/person_delete/{{ x.id }}">[Delete]</A>
 		</TD>
-	</TH>
+	</TR>
+
+{% empty %}
+
+	<TR>
+		<TH>
+			No people in database
+		</TH>
+	</TR>
+
 	
 {% endfor %}
 
 </TABLE>
+
+<P><A href="/">Return to home page</A></P>
 
 {% endblock %}

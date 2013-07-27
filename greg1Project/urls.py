@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, DeleteView
 
 from greg1App.models import Person
 from greg1App.views import PersonCreateView, PersonUpdateView
@@ -27,5 +27,5 @@ urlpatterns = patterns('',
     url(r'^person_detail/(?P<pk>\d+)$', DetailView.as_view(model=Person)),
     url(r'^person_create$', PersonCreateView.as_view(success_url='/person_list')),
     url(r'^person_update/(?P<pk>\d+)$', PersonUpdateView.as_view(success_url='/person_list')),
-    url(r'^person_delete/(?P<pk>\d+)$', DetailView.as_view(model=Person)),
+    url(r'^person_delete/(?P<pk>\d+)$', DeleteView.as_view(model=Person, success_url='/person_list')),
 )
