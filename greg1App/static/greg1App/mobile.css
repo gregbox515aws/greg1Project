@@ -63,7 +63,12 @@ a img:hover {
 	background-color: #FFFFFF;
 }
 
+table {
+	width:100%;
+}
+
 table, th, td {
 	border-spacing:2px;
 	padding:4px;
 }
+
