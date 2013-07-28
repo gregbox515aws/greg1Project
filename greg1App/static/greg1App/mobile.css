@@ -25,23 +25,27 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size:160%;
+	font-size:260%;
 }
 
 h2 {
-	font-size:130%;
+	font-size:230%;
 }
 
 h3 {
-	font-size:110%;
+	font-size:210%;
 }
 
-td {
-	font-size:95%;
+td,th {
+	font-size:195%;
 }
 
 sup {
-	font-size:70%;
+	font-size:170%;
+}
+
+p,li {
+	font-size:150%;
 }
 
 a:link {
